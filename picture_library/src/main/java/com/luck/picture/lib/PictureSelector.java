@@ -58,9 +58,9 @@ public final class PictureSelector {
      * @param fragment
      * @return PictureSelector instance.
      */
-    public static PictureSelector create(Fragment fragment) {
-        return new PictureSelector(fragment);
-    }
+//    public static PictureSelector create(Fragment fragment) {
+//        return new PictureSelector(fragment);
+//    }
 
     /**
      * @param chooseMode Select the type of picture you want，all or Picture or Video .
