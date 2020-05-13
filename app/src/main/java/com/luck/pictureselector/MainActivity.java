@@ -33,7 +33,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.animators.AnimationType;
 import com.luck.picture.lib.broadcast.BroadcastAction;
-import com.luck.picture.lib.broadcast.BroadcastManager;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.config.PictureSelectionConfig;
@@ -385,8 +384,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         // 注册广播
-        BroadcastManager.getInstance(getContext()).registerReceiver(broadcastReceiver,
-                BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
+//        BroadcastManager.getInstance(getContext()).registerReceiver(broadcastReceiver,
+//                BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
 
     }
 
@@ -1371,10 +1370,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (broadcastReceiver != null) {
-            BroadcastManager.getInstance(getContext()).unregisterReceiver(broadcastReceiver,
-                    BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
-        }
+//        if (broadcastReceiver != null) {
+//            BroadcastManager.getInstance(getContext()).unregisterReceiver(broadcastReceiver,
+//                    BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
+//        }
     }
 
     public Context getContext() {

@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -36,7 +35,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.broadcast.BroadcastAction;
-import com.luck.picture.lib.broadcast.BroadcastManager;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.decoration.GridSpacingItemDecoration;
@@ -373,10 +371,10 @@ public class PhotoFragment extends Fragment implements View.OnClickListener,
         mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         // 注册外部预览图片删除按钮回调
-        if (getActivity() != null) {
-            BroadcastManager.getInstance(getActivity()).registerReceiver(broadcastReceiver,
-                    BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
-        }
+//        if (getActivity() != null) {
+//            BroadcastManager.getInstance(getActivity()).registerReceiver(broadcastReceiver,
+//                    BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
+//        }
     }
 
     /**
@@ -1258,10 +1256,10 @@ public class PhotoFragment extends Fragment implements View.OnClickListener,
     public void onDestroy() {
         super.onDestroy();
         if (broadcastReceiver != null) {
-            if (getContext() != null) {
-                BroadcastManager.getInstance(getContext()).unregisterReceiver(broadcastReceiver,
-                        BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
-            }
+//            if (getContext() != null) {
+//                BroadcastManager.getInstance(getContext()).unregisterReceiver(broadcastReceiver,
+//                        BroadcastAction.ACTION_DELETE_PREVIEW_POSITION);
+//            }
         }
     }
 }

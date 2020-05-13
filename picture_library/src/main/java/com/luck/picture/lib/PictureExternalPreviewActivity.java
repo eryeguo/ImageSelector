@@ -24,7 +24,6 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.luck.picture.lib.broadcast.BroadcastAction;
-import com.luck.picture.lib.broadcast.BroadcastManager;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.config.PictureSelectionConfig;
@@ -168,9 +167,9 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
                 // 删除通知用户更新
                 Bundle bundle = new Bundle();
                 bundle.putInt(PictureConfig.EXTRA_PREVIEW_DELETE_POSITION, currentItem);
-                BroadcastManager.getInstance(getContext())
-                        .action(BroadcastAction.ACTION_DELETE_PREVIEW_POSITION)
-                        .extras(bundle).broadcast();
+//                BroadcastManager.getInstance(getContext())
+//                        .action(BroadcastAction.ACTION_DELETE_PREVIEW_POSITION)
+//                        .extras(bundle).broadcast();
                 if (images.size() == 0) {
                     onBackPressed();
                     return;

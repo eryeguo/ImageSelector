@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ImageSelector.iml" filepath="$PROJECT_DIR$/ImageSelector.iml" group="ImageSelector" />
+      <module fileurl="file://$PROJECT_DIR$/app/ImageSelector-app.iml" filepath="$PROJECT_DIR$/app/ImageSelector-app.iml" group="ImageSelector/app" />
+      <module fileurl="file://$PROJECT_DIR$/picture_library/ImageSelector-picture_library.iml" filepath="$PROJECT_DIR$/picture_library/ImageSelector-picture_library.iml" group="ImageSelector/picture_library" />
+      <module fileurl="file://$PROJECT_DIR$/ucrop/ImageSelector-ucrop.iml" filepath="$PROJECT_DIR$/ucrop/ImageSelector-ucrop.iml" group="ImageSelector/ucrop" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ImageSelector/app" />
+      <module fileurl="file://$PROJECT_DIR$/image-ImageSelector.iml" filepath="$PROJECT_DIR$/image-ImageSelector.iml" group="ImageSelector" />
       <module fileurl="file://$PROJECT_DIR$/picture_library/picture_library.iml" filepath="$PROJECT_DIR$/picture_library/picture_library.iml" group="ImageSelector/picture_library" />
       <module fileurl="file://$PROJECT_DIR$/ucrop/ucrop.iml" filepath="$PROJECT_DIR$/ucrop/ucrop.iml" group="ImageSelector/ucrop" />
     </modules>
